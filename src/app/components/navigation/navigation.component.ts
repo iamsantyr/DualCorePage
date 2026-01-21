@@ -19,7 +19,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
     { path: '/services', label: 'Services' },
     { path: '/portfolio', label: 'Portfolio' },
     { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
   ];
 
   private scrollHandler: (() => void) | null = null;
