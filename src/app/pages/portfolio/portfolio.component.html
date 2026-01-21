@@ -10,6 +10,45 @@
 
   <div class="portfolio-content">
     <div class="container">
+      <!-- Featured Projects Section -->
+      @if (featuredProjects.length > 0) {
+        <section class="featured-section">
+          <h2 class="section-label">Featured Project</h2>
+          <div class="featured-grid">
+            @for (project of featuredProjects; track project.title) {
+              <div class="featured-card">
+                <div class="featured-badge">★ Featured</div>
+                <div class="featured-content">
+                  <div class="featured-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                      <path d="M2 17l10 5 10-5"/>
+                      <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <h3 class="featured-title">{{ project.title }}</h3>
+                  <p class="featured-company">{{ project.company }}</p>
+                  <p class="featured-description">{{ project.description }}</p>
+                  <div class="featured-tags">
+                    @for (tech of project.technologies; track tech) {
+                      <span class="featured-tag">{{ tech }}</span>
+                    }
+                  </div>
+                  <div class="featured-results">
+                    <h4>Key Results</h4>
+                    <ul>
+                      @for (result of project.results; track result) {
+                        <li>{{ result }}</li>
+                      }
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
       <div class="portfolio-categories">
         @for (category of categories; track category) {
           <button
@@ -24,47 +63,35 @@
 
       <div class="portfolio-grid">
         @for (project of filteredProjects; track project.title; let i = $index) {
-          <div class="portfolio-card">
+          <div class="portfolio-card" [class.featured-card-style]="project.featured">
+            <div class="card-glow"></div>
             <div class="portfolio-image">
               <div class="portfolio-overlay">
                 <div class="overlay-content">
-                  <h4>{{ project.category }}</h4>
-                  <p>Project #{{ i + 1 }}</p>
+                  <span class="category-badge">{{ project.category }}</span>
                 </div>
               </div>
             </div>
             <div class="portfolio-content">
               <h3 class="portfolio-title">{{ project.title }}</h3>
-              <p class="portfolio-company">Client: {{ project.company }}</p>
+              <p class="portfolio-company">{{ project.company }}</p>
               <p class="portfolio-description">{{ project.description }}</p>
               <div class="portfolio-tags">
                 @for (tech of project.technologies; track tech) {
                   <span class="portfolio-tag">{{ tech }}</span>
                 }
               </div>
-              <a routerLink="/contact" class="portfolio-link">
-                View Details →
-              </a>
+              <div class="portfolio-results">
+                <h4>Results</h4>
+                <ul>
+                  @for (result of project.results?.slice(0, 2) || []; track result) {
+                    <li>{{ result }}</li>
+                  }
+                </ul>
+              </div>
             </div>
           </div>
         }
-      </div>
-
-      <div class="portfolio-cta-section">
-        <div class="cta-content">
-          <h2>Ready to Create Your Success Story?</h2>
-          <p>
-            Let's discuss how we can help transform your business with cutting-edge AI solutions.
-          </p>
-          <div class="cta-buttons">
-            <a routerLink="/contact" class="btn btn-primary btn-large">
-              Start Project
-            </a>
-            <a routerLink="/services" class="btn btn-secondary btn-large">
-              View Services
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>

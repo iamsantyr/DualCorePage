@@ -2,36 +2,78 @@
   <div class="innovation-container">
     <div class="innovation-content">
       <div class="innovation-text">
-        <h2 class="section-title">Innovation at Our Core</h2>
-        <p class="section-subtitle">
-          We don't just implement AI – we innovate, experiment, and push boundaries 
-          to create solutions that were previously thought impossible.
+        <div class="section-badge">
+          <span class="badge-dot"></span>
+          <span>Our Approach</span>
+        </div>
+        
+        <h2 class="section-title">Innovation Drives Everything We Do</h2>
+        <p class="section-description">
+          We don't just implement AI – we pioneer new approaches. Our team continuously experiments 
+          with cutting-edge technologies to deliver solutions that redefine what's possible.
         </p>
         
-        <div class="methodologies">
-          @for (method of methodologies; track method.title) {
-            <div class="methodology">
-              <h4>{{ method.title }}</h4>
-              <p>{{ method.description }}</p>
+        <div class="methodologies-grid">
+          @for (method of methodologies; track method.title; let i = $index) {
+            <div class="method-card">
+              <div class="method-number">{{ i + 1 }}</div>
+              <div class="method-content">
+                <h4>{{ method.title }}</h4>
+                <p>{{ method.description }}</p>
+              </div>
             </div>
           }
         </div>
-
-        <div class="innovation-cta">
-          <a routerLink="/about" class="btn btn-primary">
-            Learn About Our Process
+        
+        <div class="cta-group">
+          <a routerLink="/about" class="btn btn-secondary">
+            <span>Learn About Our Process</span>
+          </a>
+          <a routerLink="/contact" class="btn btn-primary">
+            <span>Start a Project</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
           </a>
         </div>
       </div>
       
       <div class="innovation-visual">
-        <div class="innovation-graphic">
-          <div class="innovation-node node-1"></div>
-          <div class="innovation-node node-2"></div>
-          <div class="innovation-node node-3"></div>
-          <div class="innovation-connection conn-1"></div>
-          <div class="innovation-connection conn-2"></div>
-          <div class="innovation-connection conn-3"></div>
+        <div class="visual-container">
+          <div class="innovation-graphic">
+            <div class="center-node">
+              <div class="node-glow"></div>
+              <div class="node-core"></div>
+            </div>
+            <div class="orbit-node node-1">
+              <div class="orbit-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="orbit-node node-2">
+              <div class="orbit-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+            </div>
+            <div class="orbit-node node-3">
+              <div class="orbit-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              </div>
+            </div>
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+          </div>
         </div>
       </div>
     </div>

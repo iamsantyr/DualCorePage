@@ -7,8 +7,15 @@
       </p>
     </div>
     <div class="team-grid">
-      @for (member of teamMembers; track member.name) {
-        <div class="team-card">
+      @for (member of teamMembers; track member.name; let i = $index) {
+        <div 
+          class="team-card" 
+          [class.hovered]="hoveredMember() === i"
+          (mouseenter)="setHovered(i)"
+          (mouseleave)="setHovered(null)"
+          (click)="openMemberModal(member)"
+        >
+          <div class="card-glow"></div>
           <div class="team-avatar">
             {{ getInitials(member.name) }}
           </div>
@@ -21,6 +28,13 @@
                 <span class="expertise-tag">{{ skill }}</span>
               }
             </div>
+            <button class="view-details-btn">
+              <span>View Details</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
           </div>
         </div>
       }
@@ -34,4 +48,10 @@
       </a>
     </div>
   </div>
+  
+  <app-team-modal 
+    [isOpen]="isModalOpen()" 
+    [selectedMember]="selectedMember()"
+    (close)="closeMemberModal()"
+  ></app-team-modal>
 </section>

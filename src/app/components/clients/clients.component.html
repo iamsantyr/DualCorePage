@@ -1,35 +1,156 @@
-<section class="clients-section">
-  <div class="clients-container">
+<section class="capabilities-section">
+  <div class="capabilities-container">
     <div class="section-header">
-      <h2 class="section-title">Trusted by Industry Leaders</h2>
+      <h2 class="section-title">What We Do</h2>
       <p class="section-subtitle">
-        We work with forward-thinking companies across various industries
+        We build intelligent AI solutions that transform businesses and drive measurable growth
       </p>
     </div>
-    <div class="clients-grid">
-      @for (client of clients; track client.name) {
-        <div class="client-card">
-          <div class="client-logo">{{ client.logo }}</div>
-          <div class="client-info">
-            <h3 class="client-name">{{ client.name }}</h3>
-            <p class="client-industry">{{ client.industry }}</p>
-          </div>
+    
+    <div class="capabilities-grid">
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
         </div>
-      }
+        <h3>AI Product Development</h3>
+        <p>End-to-end development of intelligent products, from concept to deployment with cutting-edge AI technologies.</p>
+        <ul class="capability-features">
+          <li>Custom ML Models</li>
+          <li>Intelligent Automation</li>
+          <li>Scalable Architecture</li>
+        </ul>
+      </div>
+      
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Machine Learning Solutions</h3>
+        <p>Advanced ML models tailored to your specific business needs, from predictive analytics to computer vision.</p>
+        <ul class="capability-features">
+          <li>Predictive Analytics</li>
+          <li>Natural Language Processing</li>
+          <li>Computer Vision</li>
+        </ul>
+      </div>
+      
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Agentic Workflows</h3>
+        <p>Autonomous AI agents that handle complex workflows, making decisions and taking actions without human intervention.</p>
+        <ul class="capability-features">
+          <li>Task Automation</li>
+          <li>Decision Making</li>
+          <li>24/7 Autonomous Operation</li>
+        </ul>
+      </div>
+      
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+          </svg>
+        </div>
+        <h3>Cloud-Native AI</h3>
+        <p>Deploy and scale your AI solutions in the cloud with enterprise-grade security and reliability.</p>
+        <ul class="capability-features">
+          <li>AWS & Azure Integration</li>
+          <li>Auto-Scaling</li>
+          <li>High Availability</li>
+        </ul>
+      </div>
+      
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>API Integration</h3>
+        <p>Seamlessly integrate AI capabilities into your existing systems and workflows through robust APIs.</p>
+        <ul class="capability-features">
+          <li>RESTful APIs</li>
+          <li>Webhook Support</li>
+          <li>SDK Libraries</li>
+        </ul>
+      </div>
+      
+      <div class="capability-card">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>AI Consulting & Strategy</h3>
+        <p>Expert guidance on AI adoption, helping you identify opportunities and develop an effective AI strategy.</p>
+        <ul class="capability-features">
+          <li>Technology Assessment</li>
+          <li>ROI Analysis</li>
+          <li>Implementation Roadmap</li>
+        </ul>
+      </div>
     </div>
     
-    <div class="clients-stats">
-      <div class="stat-item">
-        <h3>100+</h3>
-        <p>Happy Clients</p>
-      </div>
-      <div class="stat-item">
-        <h3>95%</h3>
-        <p>Client Retention</p>
-      </div>
-      <div class="stat-item">
-        <h3>50+</h3>
-        <p>Industries Served</p>
+    <div class="why-work-section">
+      <div class="why-work-content">
+        <div class="why-work-text">
+          <h3>Why Work With Us?</h3>
+          <p>
+            We're a young, innovative team passionate about pushing the boundaries of what's possible with AI. 
+            We bring fresh perspectives and cutting-edge expertise to every project.
+          </p>
+          <ul class="benefits-list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              PhD-level AI researchers and industry veterans
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Rapid iteration and agile development
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Commitment to ethical, transparent AI
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Dedicated support and maintenance
+            </li>
+          </ul>
+        </div>
+        <div class="why-work-cta">
+          <h4>Ready to Build Something Amazing?</h4>
+          <p>Let's discuss how we can help transform your business with AI</p>
+          <a routerLink="/contact" class="btn btn-primary">
+            <span>Start Your Project</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>

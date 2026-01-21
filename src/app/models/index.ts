@@ -120,6 +120,7 @@ export interface PortfolioProject {
   technologies?: string[];
   link?: string;
   results?: string[];
+  featured?: boolean;
 }
 
 export interface Service {
