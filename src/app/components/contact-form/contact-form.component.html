@@ -3,7 +3,7 @@
   
   @if (formStatus.success) {
     <div class="form-success">
-      <div class="success-icon">✓</div>
+      <div class="success-icon"></div>
       <h4>Message Sent Successfully!</h4>
       <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
     </div>
@@ -11,7 +11,7 @@
 
   @if (formStatus.error) {
     <div class="form-error">
-      <div class="error-icon">⚠</div>
+      <div class="error-icon"></div>
       <p>{{ formStatus.error }}</p>
     </div>
   }

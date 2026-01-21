@@ -12,32 +12,32 @@ import { ProofPoint } from '../../models';
 export class ProofPointsComponent {
   proofPoints: ProofPoint[] = [
     {
-      icon: '🚀',
+      icon: '',
       title: 'Proven Track Record',
       description: 'Successfully delivered 50+ AI projects across various industries with measurable business impact.'
     },
     {
-      icon: '⚡',
+      icon: '',
       title: 'Rapid Deployment',
       description: 'From concept to deployment in weeks, not months. Our agile approach ensures fast time-to-market.'
     },
     {
-      icon: '🛡️',
+      icon: '',
       title: 'Enterprise Security',
       description: 'Bank-level security protocols and compliance with industry standards to protect your data.'
     },
     {
-      icon: '📈',
+      icon: '',
       title: 'Scalable Solutions',
       description: 'AI systems that grow with your business, handling increasing workloads efficiently.'
     },
     {
-      icon: '🤝',
+      icon: '',
       title: 'Expert Team',
       description: 'PhD-level researchers and industry veterans with deep expertise in AI/ML technologies.'
     },
     {
-      icon: '🔄',
+      icon: '',
       title: '24/7 Support',
       description: 'Round-the-clock monitoring and support to ensure your AI systems run optimally.'
     }

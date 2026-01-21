@@ -21,7 +21,7 @@ export class ServicesComponent {
         'Existing system integration',
         'Dynamic adaptation to changes'
       ],
-      icon: '🤖'
+      icon: ''
     },
     {
       title: 'Advanced Machine Learning',
@@ -32,7 +32,7 @@ export class ServicesComponent {
         'Process optimization',
         'Scalable data pipelines'
       ],
-      icon: '🧠'
+      icon: ''
     },
     {
       title: 'Intelligent Products',
@@ -43,7 +43,7 @@ export class ServicesComponent {
         'Automated personalization',
         'Predictive user analytics'
       ],
-      icon: '🎯'
+      icon: ''
     },
     {
       title: 'Cloud Architectures',
@@ -54,7 +54,7 @@ export class ServicesComponent {
         'Security and compliance',
         'ML DevOps'
       ],
-      icon: '☁️'
+      icon: ''
     },
     {
       title: 'Strategy & Discovery',
@@ -65,7 +65,7 @@ export class ServicesComponent {
         'Strategic roadmap',
         'Impact analysis'
       ],
-      icon: '🔍'
+      icon: ''
     },
     {
       title: 'Full Lifecycle Management',
@@ -76,7 +76,7 @@ export class ServicesComponent {
         'Impact measurement',
         'Global 24/7 support'
       ],
-      icon: '🔄'
+      icon: ''
     }
   ];
 }

@@ -12,25 +12,25 @@ import { ContactMethod, SocialLink } from '../../models';
 export class ContactInfoComponent {
   contactMethods: ContactMethod[] = [
     {
-      icon: '📧',
+      icon: '',
       title: 'Email',
       value: 'dualcore.oficial@gmail.com',
       description: 'Write to us anytime'
     },
     {
-      icon: '📞',
+      icon: '',
       title: 'Remote Operations',
       value: '100% Remote - Bogotá, Colombia',
       description: 'Available for clients worldwide'
     },
     {
-      icon: '💬',
+      icon: '',
       title: 'Response Time',
       value: 'Within 24 hours',
       description: 'Fast communication for all our clients'
     },
     {
-      icon: '📍',
+      icon: '',
       title: 'Location',
       value: 'Bogotá, Colombia',
       description: 'Serving global clients from Colombia'
@@ -38,9 +38,9 @@ export class ContactInfoComponent {
   ];
 
   socialLinks: SocialLink[] = [
-    { name: 'X (Twitter)', url: 'https://x.com/DualCoreOff', icon: '𝕏' },
-    { name: 'Instagram', url: 'https://www.instagram.com/dualcoreoff/', icon: '📷' },
-    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61585368651527', icon: '📘' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/dualcore-official/about/', icon: '💼' }
+    { name: 'X (Twitter)', url: 'https://x.com/DualCoreOff', icon: '' },
+    { name: 'Instagram', url: 'https://www.instagram.com/dualcoreoff/', icon: '' },
+    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61585368651527', icon: '' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/dualcore-official/about/', icon: '' }
   ];
 }

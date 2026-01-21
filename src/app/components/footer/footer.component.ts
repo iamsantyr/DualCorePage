@@ -47,9 +47,9 @@ export class FooterComponent {
   ];
 
   socialLinks: SocialLink[] = [
-    { name: 'X (Twitter)', url: 'https://x.com/DualCoreOff', icon: '𝕏' },
-    { name: 'Instagram', url: 'https://www.instagram.com/dualcoreoff/', icon: '📷' },
-    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61585368651527', icon: '📘' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/dualcore-official/about/', icon: '💼' }
+    { name: 'X (Twitter)', url: 'https://x.com/DualCoreOff', icon: '' },
+    { name: 'Instagram', url: 'https://www.instagram.com/dualcoreoff/', icon: '' },
+    { name: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61585368651527', icon: '' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/dualcore-official/about/', icon: '' }
   ];
 }
