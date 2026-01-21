@@ -22,17 +22,14 @@ export class TeamModalComponent {
   getMemberSocialLinks(name: string): SocialLink[] {
     if (name.includes('Sergio')) {
       return [
-        { name: 'GitHub', url: 'https://github.com/sergiolopez', icon: 'github' },
-        { name: 'LinkedIn', url: 'https://linkedin.com/in/sergiolopez', icon: 'linkedin' },
-        { name: 'Twitter', url: 'https://x.com/sergiolopez', icon: 'twitter' },
-        { name: 'Email', url: 'mailto:sergio@dualcore.ai', icon: 'email' }
+        { name: 'GitHub', url: 'https://github.com/SergioLopezAyala', icon: 'github' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sergio-lopez-b52495295/', icon: 'linkedin' }
       ];
     } else {
       return [
-        { name: 'GitHub', url: 'https://github.com/santiagorodriguez', icon: 'github' },
-        { name: 'LinkedIn', url: 'https://linkedin.com/in/santiagorodriguez', icon: 'linkedin' },
-        { name: 'Instagram', url: 'https://instagram.com/santiagorodriguez', icon: 'instagram' },
-        { name: 'Email', url: 'mailto:santiago@dualcore.ai', icon: 'email' }
+        { name: 'GitHub', url: 'https://github.com/iamsantyr', icon: 'github' },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/santiago-rodriguez-prieto-9019a5350/', icon: 'linkedin' },
+        { name: 'Email', url: 'mailto:iamsantyr@gmail.com', icon: 'email' }
       ];
     }
   }
