@@ -1,0 +1,8 @@
+
+node_modules/
+.angular/
+src/**/*.css
+src/**/*.js
+*.lock
+.DS_Store
+

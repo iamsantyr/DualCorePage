@@ -1,0 +1,37 @@
+<section class="team-section">
+  <div class="team-container">
+    <div class="section-header">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">
+        Founded in 2025 in Bogotá, Colombia. Passionate professionals creating easy-to-understand AI solutions for business automation.
+      </p>
+    </div>
+    <div class="team-grid">
+      @for (member of teamMembers; track member.name) {
+        <div class="team-card">
+          <div class="team-avatar">
+            {{ getInitials(member.name) }}
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">{{ member.name }}</h3>
+            <p class="team-role">{{ member.role }}</p>
+            <p class="team-background">{{ member.background }}</p>
+            <div class="team-expertise">
+              @for (skill of member.expertise; track skill) {
+                <span class="expertise-tag">{{ skill }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="team-cta">
+      <h3>Want to work with us?</h3>
+      <p>We are always looking for exceptional talent to join our growing team</p>
+      <a routerLink="/contact" class="btn btn-primary">
+        Join the Team
+      </a>
+    </div>
+  </div>
+</section>

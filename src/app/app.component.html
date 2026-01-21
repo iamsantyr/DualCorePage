@@ -1,0 +1,22 @@
+<div class="App">
+  <!-- Data Streams Background -->
+  <div class="data-streams" id="dataStreams"></div>
+
+  <!-- Custom Cursor -->
+  <div 
+    class="custom-cursor" 
+    #customCursor
+    [class.hovering]="cursorHovering()"
+  ></div>
+
+  <!-- Navigation -->
+  <app-navigation></app-navigation>
+
+  <!-- Main Content -->
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div>

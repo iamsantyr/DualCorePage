@@ -1,0 +1,114 @@
+<div class="contact-form-container">
+  <h3>Send us a Message</h3>
+  
+  @if (formStatus.success) {
+    <div class="form-success">
+      <div class="success-icon">✓</div>
+      <h4>Message Sent Successfully!</h4>
+      <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+    </div>
+  }
+
+  @if (formStatus.error) {
+    <div class="form-error">
+      <div class="error-icon">⚠</div>
+      <p>{{ formStatus.error }}</p>
+    </div>
+  }
+
+  <form [formGroup]="contactForm" (ngSubmit)="handleSubmit()" class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          [value]="formData.name"
+          (input)="handleInputChange('name', $any($event.target).value)"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          [value]="formData.email"
+          (input)="handleInputChange('email', $any($event.target).value)"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="company">Company/Organization</label>
+        <input
+          type="text"
+          id="company"
+          formControlName="company"
+          [value]="formData.company"
+          (input)="handleInputChange('company', $any($event.target).value)"
+          placeholder="Your company name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="projectType">Project Type</label>
+        <select
+          id="projectType"
+          formControlName="projectType"
+          [value]="formData.projectType"
+          (change)="handleInputChange('projectType', $any($event.target).value)"
+        >
+          <option value="">Select a service</option>
+          @for (type of projectTypes; track type) {
+            <option [value]="type">{{ type }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input
+        type="text"
+        id="subject"
+        formControlName="subject"
+        [value]="formData.subject"
+        (input)="handleInputChange('subject', $any($event.target).value)"
+        placeholder="Brief subject of your inquiry"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        [value]="formData.message"
+        (input)="handleInputChange('message', $any($event.target).value)"
+        placeholder="Tell us about your project, goals, and how we can help..."
+        rows="6"
+        required
+      ></textarea>
+    </div>
+
+    <button 
+      type="submit" 
+      class="btn btn-primary btn-large form-submit"
+      [class.loading]="formStatus.loading"
+      [disabled]="formStatus.loading"
+    >
+      @if (formStatus.loading) {
+        <div class="spinner"></div>
+        Sending Message...
+      } @else {
+        Send Message
+      }
+    </button>
+  </form>
+</div>

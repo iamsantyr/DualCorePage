@@ -1,0 +1,59 @@
+<section class="cases-section">
+  <div class="cases-container">
+    <div class="section-header">
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-subtitle">
+        Real-world AI implementations delivering measurable business value
+      </p>
+    </div>
+    <div class="cases-grid">
+      @for (caseStudy of caseStudies; track caseStudy.title) {
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-image">
+              <div class="case-overlay">
+                <div class="case-company">{{ caseStudy.company }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-content">
+            <h3 class="case-title">{{ caseStudy.title }}</h3>
+            <p>{{ caseStudy.description }}</p>
+            
+            <div class="case-metrics">
+              @for (metric of caseStudy.metrics; track metric.label) {
+                <div class="metric-item">
+                  <strong>{{ metric.label }}</strong>
+                  <p>{{ metric.value }}</p>
+                </div>
+              }
+            </div>
+            
+            <div class="results-list">
+              <h4>Key Results:</h4>
+              <ul>
+                @for (result of caseStudy.results; track result) {
+                  <li>{{ result }}</li>
+                }
+              </ul>
+            </div>
+            
+            <div class="case-tech">
+              @for (tech of caseStudy.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="case-cta">
+      <h3>Want to see more case studies?</h3>
+      <p>Explore our complete portfolio of successful AI implementations</p>
+      <a routerLink="/portfolio" class="btn btn-primary">
+        View Full Portfolio
+      </a>
+    </div>
+  </div>
+</section>

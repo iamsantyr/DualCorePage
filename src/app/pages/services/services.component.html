@@ -1,0 +1,57 @@
+<div class="services-page">
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Our Services</h1>
+      <p class="page-subtitle">
+        ML-powered and agentic workflow solutions that automate decisions, 
+        optimize processes and build intelligent products from start to finish.
+      </p>
+    </div>
+  </div>
+
+  <div class="services-content">
+    <div class="container">
+      <div class="services-grid">
+        @for (service of services; track service.title) {
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">{{ service.icon }}</div>
+              <div class="service-info">
+                <h3>{{ service.title }}</h3>
+                <span class="service-category">IA Solutions</span>
+              </div>
+            </div>
+            <p class="service-description">{{ service.description }}</p>
+            <ul class="service-features">
+              @for (feature of service.features; track feature) {
+                <li>{{ feature }}</li>
+              }
+            </ul>
+            <div class="service-cta">
+              <a routerLink="/contact" class="btn btn-primary">
+                Learn More
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="services-cta-section">
+        <div class="cta-content">
+          <h2>Ready to Transform Your Business?</h2>
+          <p>
+            Let's discuss how our AI solutions can drive innovation and growth for your organization.
+          </p>
+          <div class="cta-buttons">
+            <a routerLink="/contact" class="btn btn-primary btn-large">
+              Start Project
+            </a>
+            <a routerLink="/portfolio" class="btn btn-secondary btn-large">
+              View Our Work
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

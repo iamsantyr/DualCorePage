@@ -1,0 +1,39 @@
+<section class="innovation-section">
+  <div class="innovation-container">
+    <div class="innovation-content">
+      <div class="innovation-text">
+        <h2 class="section-title">Innovation at Our Core</h2>
+        <p class="section-subtitle">
+          We don't just implement AI – we innovate, experiment, and push boundaries 
+          to create solutions that were previously thought impossible.
+        </p>
+        
+        <div class="methodologies">
+          @for (method of methodologies; track method.title) {
+            <div class="methodology">
+              <h4>{{ method.title }}</h4>
+              <p>{{ method.description }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="innovation-cta">
+          <a routerLink="/about" class="btn btn-primary">
+            Learn About Our Process
+          </a>
+        </div>
+      </div>
+      
+      <div class="innovation-visual">
+        <div class="innovation-graphic">
+          <div class="innovation-node node-1"></div>
+          <div class="innovation-node node-2"></div>
+          <div class="innovation-node node-3"></div>
+          <div class="innovation-connection conn-1"></div>
+          <div class="innovation-connection conn-2"></div>
+          <div class="innovation-connection conn-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

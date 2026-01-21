@@ -1,0 +1,36 @@
+<section class="clients-section">
+  <div class="clients-container">
+    <div class="section-header">
+      <h2 class="section-title">Trusted by Industry Leaders</h2>
+      <p class="section-subtitle">
+        We work with forward-thinking companies across various industries
+      </p>
+    </div>
+    <div class="clients-grid">
+      @for (client of clients; track client.name) {
+        <div class="client-card">
+          <div class="client-logo">{{ client.logo }}</div>
+          <div class="client-info">
+            <h3 class="client-name">{{ client.name }}</h3>
+            <p class="client-industry">{{ client.industry }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    
+    <div class="clients-stats">
+      <div class="stat-item">
+        <h3>100+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-item">
+        <h3>95%</h3>
+        <p>Client Retention</p>
+      </div>
+      <div class="stat-item">
+        <h3>50+</h3>
+        <p>Industries Served</p>
+      </div>
+    </div>
+  </div>
+</section>

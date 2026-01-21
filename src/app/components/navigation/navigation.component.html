@@ -1,0 +1,58 @@
+<nav class="navbar" id="navbar" [class.scrolled]="isScrolled()">
+  <div class="nav-container">
+    <a routerLink="/" class="nav-logo">
+      <img src="assets/logo.png" alt="DualCore" width="40" height="40">
+      <div class="logo-text">
+        <span class="main-text">DualCore</span>
+        <span class="sub-text">Intelligence Labs</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          class="nav-link"
+          [class.active]="isActive(item.path)"
+        >
+          {{ item.label }}
+        </a>
+      }
+      <a routerLink="/contact" class="nav-link cta-link">
+        Get Started
+      </a>
+    </div>
+
+    <button 
+      class="mobile-menu-btn"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  @if (isMenuOpen()) {
+    <div class="mobile-menu">
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          class="mobile-nav-link"
+          [class.active]="isActive(item.path)"
+          (click)="closeMenu()"
+        >
+          {{ item.label }}
+        </a>
+      }
+      <a 
+        routerLink="/contact" 
+        class="mobile-nav-link cta-link"
+        (click)="closeMenu()"
+      >
+        Get Started
+      </a>
+    </div>
+  }
+</nav>

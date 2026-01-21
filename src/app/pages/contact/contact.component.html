@@ -1,0 +1,30 @@
+<div class="contact-page">
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-subtitle">
+        Contact us to discuss your projects and business goals. 
+        Our team of experts is ready to help you achieve success.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-page-content">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-form-container">
+          <app-contact-form 
+            [formData]="formData()"
+            [formStatus]="formStatus()"
+            [contactForm]="contactForm"
+            (onInputChange)="handleInputChange($event.field, $event.value)"
+            (onSubmit)="handleSubmit()"
+          ></app-contact-form>
+        </div>
+        <div class="contact-info-container">
+          <app-contact-info></app-contact-info>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

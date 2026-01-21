@@ -1,0 +1,49 @@
+<div class="contact-info-container">
+  <h3>Contact Us</h3>
+  <p class="contact-info-description">
+    Ready to transform your business with AI? We're here to help you every step of the way.
+  </p>
+
+  <div class="contact-methods">
+    @for (method of contactMethods; track method.title) {
+      <div class="contact-method">
+        <div class="method-icon">{{ method.icon }}</div>
+        <div class="method-content">
+          <h4>{{ method.title }}</h4>
+          <p class="method-value">{{ method.value }}</p>
+          <p class="method-description">{{ method.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="contact-social">
+    <h4>Follow Us</h4>
+    <div class="social-links">
+      @for (social of socialLinks; track social.name) {
+        <a [href]="social.url" class="social-link" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">{{ social.icon }}</span>
+          <span>{{ social.name }}</span>
+        </a>
+      }
+    </div>
+  </div>
+
+  <div class="contact-hours">
+    <h4>Business Hours</h4>
+    <div class="hours-list">
+      <div class="hour-item">
+        <span class="day">Monday - Friday</span>
+        <span class="time">9:00 AM - 6:00 PM</span>
+      </div>
+      <div class="hour-item">
+        <span class="day">Saturday</span>
+        <span class="time">10:00 AM - 2:00 PM</span>
+      </div>
+      <div class="hour-item">
+        <span class="day">Sunday</span>
+        <span class="time">Available for urgent matters</span>
+      </div>
+    </div>
+  </div>
+</div>

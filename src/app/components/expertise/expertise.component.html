@@ -1,0 +1,37 @@
+<section class="expertise-section">
+  <div class="expertise-container">
+    <div class="section-header">
+      <h2 class="section-title">Our Expertise</h2>
+      <p class="section-subtitle">
+        Cutting-edge technologies for agentic workflows and advanced machine learning
+      </p>
+    </div>
+    <div class="expertise-grid">
+      @for (area of expertiseAreas; track area.title) {
+        <div class="expertise-card">
+          <div class="expertise-header">
+            <div class="expertise-icon">{{ area.icon }}</div>
+            <div class="expertise-info">
+              <h3>{{ area.title }}</h3>
+              <div class="skill-level">
+                <div class="level-bar">
+                  <div 
+                    class="level-fill" 
+                    [style.width.%]="area.level"
+                  ></div>
+                </div>
+                <span class="level-text">{{ area.level }}%</span>
+              </div>
+            </div>
+          </div>
+          <p class="expertise-description">{{ area.description }}</p>
+          <div class="skill-tags">
+            @for (skill of area.skills; track skill) {
+              <span class="skill-tag">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+<div class="portfolio-page">
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Our Portfolio</h1>
+      <p class="page-subtitle">
+        Real projects showcasing our expertise in AI automation, intelligent products, and easy-to-understand solutions for businesses. Based in Bogotá, Colombia, serving clients globally with 100% remote operations.
+      </p>
+    </div>
+  </div>
+
+  <div class="portfolio-content">
+    <div class="container">
+      <div class="portfolio-categories">
+        @for (category of categories; track category) {
+          <button
+            class="category-btn"
+            [class.active]="selectedCategory() === category"
+            (click)="setCategory(category)"
+          >
+            {{ category }}
+          </button>
+        }
+      </div>
+
+      <div class="portfolio-grid">
+        @for (project of filteredProjects; track project.title; let i = $index) {
+          <div class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-overlay">
+                <div class="overlay-content">
+                  <h4>{{ project.category }}</h4>
+                  <p>Project #{{ i + 1 }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-content">
+              <h3 class="portfolio-title">{{ project.title }}</h3>
+              <p class="portfolio-company">Client: {{ project.company }}</p>
+              <p class="portfolio-description">{{ project.description }}</p>
+              <div class="portfolio-tags">
+                @for (tech of project.technologies; track tech) {
+                  <span class="portfolio-tag">{{ tech }}</span>
+                }
+              </div>
+              <a routerLink="/contact" class="portfolio-link">
+                View Details →
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="portfolio-cta-section">
+        <div class="cta-content">
+          <h2>Ready to Create Your Success Story?</h2>
+          <p>
+            Let's discuss how we can help transform your business with cutting-edge AI solutions.
+          </p>
+          <div class="cta-buttons">
+            <a routerLink="/contact" class="btn btn-primary btn-large">
+              Start Project
+            </a>
+            <a routerLink="/services" class="btn btn-secondary btn-large">
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

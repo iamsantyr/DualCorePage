@@ -1,0 +1,19 @@
+<section class="proof-section">
+  <div class="proof-container">
+    <div class="section-header">
+      <h2 class="section-title">Why Choose DualCore?</h2>
+      <p class="section-subtitle">
+        We combine cutting-edge technology with practical business insights
+      </p>
+    </div>
+    <div class="proof-grid">
+      @for (point of proofPoints; track point.title) {
+        <div class="proof-item">
+          <div class="proof-icon">{{ point.icon }}</div>
+          <h3>{{ point.title }}</h3>
+          <p>{{ point.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
