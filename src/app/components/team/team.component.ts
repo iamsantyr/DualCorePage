@@ -20,12 +20,14 @@ export class TeamComponent {
     {
       name: 'Sergio López',
       role: 'Co-Founder & Backend Lead',
+      imageUrl: 'assets/sergio.jpg',
       background: 'Backend specialist and deployment expert. Handles project organization, system architecture, and technical infrastructure for AI solutions. Passionate about building scalable systems that power intelligent workflows.',
       expertise: ['Project Organization', 'Backend Development', 'System Deployment', 'Technical Infrastructure', 'Cloud Architecture', 'DevOps']
     },
     {
       name: 'Santiago Rodríguez',
       role: 'Co-Founder & Frontend Lead',
+      imageUrl: 'assets/santiago.jpg',
       background: 'Frontend specialist and social media strategist. Expert in user experience, documentation, and frontend-backend integration for intelligent products. Dedicated to creating seamless user experiences.',
       expertise: ['Frontend Development', 'Social Media Strategy', 'Documentation', 'Frontend-Backend Connection', 'UX Design', 'Product Strategy']
     }

@@ -11,7 +11,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="avatar-large">
-            {{ getInitials(selectedMember.name) }}
+            @if (selectedMember.imageUrl) {
+              <img [src]="selectedMember.imageUrl" [alt]="selectedMember.name" class="avatar-image">
+            } @else {
+              {{ getInitials(selectedMember.name) }}
+            }
           </div>
           <div class="header-info">
             <h2 class="member-name">{{ selectedMember.name }}</h2>

@@ -17,7 +17,11 @@
         >
           <div class="card-glow"></div>
           <div class="team-avatar">
-            {{ getInitials(member.name) }}
+            @if (member.imageUrl) {
+              <img [src]="member.imageUrl" [alt]="member.name" class="avatar-image">
+            } @else {
+              {{ getInitials(member.name) }}
+            }
           </div>
           <div class="team-info">
             <h3 class="team-name">{{ member.name }}</h3>
