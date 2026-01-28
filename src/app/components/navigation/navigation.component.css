@@ -1,0 +1,4 @@
+/* Navigation component styles */
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.98) !important;
+}
