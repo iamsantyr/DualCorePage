@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 import { ProofPointsComponent } from '../../components/proof-points/proof-points.component';
 import { ExpertiseComponent } from '../../components/expertise/expertise.component';
-import { CaseStudiesComponent } from '../../components/case-studies/case-studies.component';
 import { InnovationComponent } from '../../components/innovation/innovation.component';
 import { ClientsComponent } from '../../components/clients/clients.component';
 import { TeamComponent } from '../../components/team/team.component';
@@ -17,7 +16,6 @@ import { ContactPreviewComponent } from '../../components/contact-preview/contac
     HeroSectionComponent,
     ProofPointsComponent,
     ExpertiseComponent,
-    CaseStudiesComponent,
     InnovationComponent,
     ClientsComponent,
     TeamComponent,
