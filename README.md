@@ -50,6 +50,9 @@ src/app/
 ```bash
 npm install
 ng serve
+-- Si no funciona con ese comando. Usar este.
+npx ng serve
+
 ```
 
 Abre `http://localhost:4200/`
