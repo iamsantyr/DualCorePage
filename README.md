@@ -13,6 +13,8 @@ Cofundado por **Sergio López** (Backend Lead) y **Santiago Rodríguez** (Fronte
 <img width="900" height="460" alt="image" src="https://github.com/user-attachments/assets/a31489a2-1790-4442-ae79-8710615b920b" />
 
 
+<img width="900" height="460" alt="image" src="https://github.com/user-attachments/assets/0961652f-2807-4a1e-a212-89d33c0d757b" />
+
 
 
 ## Features
