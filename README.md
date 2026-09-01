@@ -8,6 +8,13 @@ DualCore Intelligence Labs diseña e implementa productos de IA, agentes autóno
 
 Cofundado por **Sergio López** (Backend Lead) y **Santiago Rodríguez** (Frontend Lead).
 
+## Screenshots
+
+<img width="900" height="460" alt="image" src="https://github.com/user-attachments/assets/a31489a2-1790-4442-ae79-8710615b920b" />
+
+
+
+
 ## Features
 
 - Landing page responsiva de una sola página (secciones Home, Services, Portfolio, About)
